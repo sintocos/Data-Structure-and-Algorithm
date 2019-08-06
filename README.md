@@ -1,7 +1,26 @@
 Algorithm Interview
 ==
 
-[TOC]
+Table of Contents
+
+- [1.General](#1general)
+- [2.Sequence](#2sequence)
+- [3.Array](#3array)
+- [4.Binary](#4binary)
+- [5.Dynamic Programming](#5dynamic-programming)
+- [6.Graph](#6graph)
+- [7.Interval](#7interval)
+- [8.Linked List](#8linked-list)
+- [9.Math](#9math)
+- [10.Matrix](#10matrix)
+- [11.Recursion](#11recursion)
+- [12.String](#12string)
+- [13.Tree](#13tree)
+- [14.Trie](#14trie)
+- [15.Heap](#15heap)
+- [References](#references)
+
+
 
 ## 1.General
 
@@ -50,12 +69,12 @@ Algorithm Interview
 **题目**
 
 - [Two Sum](https://leetcode.com/problems/two-sum/)
-- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
-- [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+- [Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)
+- [Contains Duplicate III](https://leetcode.com/problems/contains-duplicate-iii/)
 - [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 - [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 - [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
-- [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+- [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)
 - [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 - [3Sum](https://leetcode.com/problems/3sum/)
 - [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
