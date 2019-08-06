@@ -22,7 +22,7 @@ Table of Contents
 
 
 
-## 1.General
+## 1. General
 
 1. **明确假设**：任何在潜意识里面做的假设都要明确下来，因为很多问题故意设置一些特殊情形，不符合一般性的假设。
 2. **验证输入**：检查无效/空/负/其他类型的输入。 永远不要假设您获得了有效参数。 或者和面试官确定你是否可以假设输入有效（通常是），这可以让你不用写输入验证的代码，节省时间。
@@ -42,7 +42,7 @@ Table of Contents
 13. **使用hashmap**：它可能是算法问题中最常用的数据结构。如果在某一个问题中卡壳了，可以考虑使用hashmap，或者枚举所有可能的数据结构来考虑哪个比较有用。
 14. **阐述想法**：如果代码写不出来，可以和面试官讲一下在非面试环境中(没有时间限制)你会做些什么来解决这个问题。例如，写一个正则表达式来解析这个字符串，而不是使用`split（）`，因为它可能无法涵盖所有情况。
 
-## 2.Sequence
+## 2. Sequence
 
 数组和字符串被认为是序列（字符串是一系列字符）。这里有一些处理数组和字符串的小技巧。
 
@@ -59,7 +59,7 @@ Table of Contents
  - 序列只有一个或者两个元素。
  - 有重复元素的序列。
 
-## 3.Array
+## 3. Array
 
 1. **是否有序**：数组是完全排好序的还是只有一部分排好序？ 如果是，则应该可以进行某种形式的二分查找。 这通常意味着面试官正在寻找比O(N)更快的解决方案。
 2. **是否可排序**：有时先对数组进行排序可以大大简化问题。在尝试排序之前，请确保不需要保留数组元素的原来的顺序。
@@ -79,7 +79,7 @@ Table of Contents
 - [3Sum](https://leetcode.com/problems/3sum/)
 - [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 
-## 4.Binary
+## 4. Binary
 
 **学习链接**
 
@@ -107,7 +107,7 @@ Table of Contents
 - [Missing Number](https://leetcode.com/problems/missing-number/)
 - [Reverse Bits](https://leetcode.com/problems/reverse-bits/)
 
-## 5.Dynamic Programming
+## 5. Dynamic Programming
 
 **学习链接**
 
@@ -132,7 +132,7 @@ Table of Contents
 - [Unique Paths](https://leetcode.com/problems/unique-paths/)
 - [Jump Game](https://leetcode.com/problems/jump-game/)
 
-## 6.Graph
+## 6. Graph
 
 **学习链接**
 
@@ -174,7 +174,7 @@ Table of Contents
 - [Graph Valid Tree (Leetcode Premium)](https://leetcode.com/problems/graph-valid-tree/)
 - [Number of Connected Components in an Undirected Graph (Leetcode Premium)](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
 
-## 7.Interval
+## 7. Interval
 
 区间问题(Interval question)就是求多个区间交集并集之类的问题。最典型的就是给一个数组，这个数组里面的每一个单元/元素是一个二元组，二元组里面的两个数一个代表开始值，另一个代表结束值，构成一个区间。 区间问题被认为是数组类问题的一部分，但它们涉及了一些常用的技术，因此在这里单独提及。对于不熟悉区间问题的人来说，区间问题可能有点困难，因为考虑区间重叠时比较麻烦。`[[1,2]，[4,7]]`就是一个区间数组。
 
@@ -207,7 +207,7 @@ def merge_overlapping_intervals(a, b):
 - [Meeting Rooms (Leetcode Premium)](https://leetcode.com/problems/meeting-rooms/) 
 - [Meeting Rooms II (Leetcode Premium)](https://leetcode.com/problems/meeting-rooms-ii/)
 
-## 8.Linked List
+## 8. Linked List
 
 1. 与数组一样，链表用于表示数据序列。链表的好处是，**从链表中的任何位置插入和删除都是O(1)**，而在数组中，必须移动后续的元素。
 
@@ -248,7 +248,7 @@ def merge_overlapping_intervals(a, b):
 - [Remove Nth Node From End Of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 - [Reorder List](https://leetcode.com/problems/reorder-list/)
 
-## 9.Math
+## 9. Math
 
 1. 如果代码涉及除法或取模，请注意**除或模为0**的情形。
 
@@ -276,7 +276,7 @@ def merge_overlapping_intervals(a, b):
 - [Sqrt(x)](https://leetcode.com/problems/sqrtx/)
 - [Integer to English Words](https://leetcode.com/problems/integer-to-english-words/)
 
-## 10.Matrix
+## 10. Matrix
 
 1. 矩阵是二维数组。 涉及矩阵的问题通常与动态规划或图遍历有关。
 2. 对于涉及遍历和动态规划的问题，一般是创建具有相同维度的矩阵的副本，该矩阵被初始化为空值以存储访问的状态或动态规划表。需要熟悉下面的常规方法：
@@ -305,7 +305,7 @@ transposed_matrix = zip(*matrix)
 - [Rotate Image](https://leetcode.com/problems/rotate-image/)
 - [Word Search](https://leetcode.com/problems/word-search/)
 
-## 11.Recursion
+## 11. Recursion
 
 1. 递归对于变换/重排等非常有用，因为它会生成基于树的问题集以及所有的组合情况。注意一定要生成所有的情况，不要漏掉，另外要记得处理重复的情况或不符合条件的情况。 
 
@@ -321,7 +321,7 @@ transposed_matrix = zip(*matrix)
 - [Subsets II](https://leetcode.com/problems/subsets-ii/)
 - [Strobogrammatic Number II (Leetcode Premium)](https://leetcode.com/problems/strobogrammatic-number-ii/)
 
-## 12.String
+## 12. String
 
 1. 字符串是序列的一种，前面的第2节Sequence也适用于字符串。
 
@@ -391,7 +391,7 @@ for c in set（word）：
 - [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
 - [Encode and Decode Strings (Leetcode Premium)](https://leetcode.com/problems/encode-and-decode-strings/)
 
-## 13.Tree
+## 13. Tree
 
 **学习链接**
 
@@ -444,7 +444,7 @@ for c in set（word）：
 - [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
 - [Lowest Common Ancestor of BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 
-## 14.Trie
+## 14. Trie
 
 **学习链接**
 
@@ -464,7 +464,7 @@ for c in set（word）：
 - [Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design)
 - [Word Search II](https://leetcode.com/problems/word-search-ii/)
 
-## 15.Heap
+## 15. Heap
 
 **学习链接**
 
