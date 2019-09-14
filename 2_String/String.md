@@ -2,9 +2,9 @@
 
 [TOC]
 
-### 1. KMP和BM算法
+### 1. KMP算法
 
-谈到字符串问题，不得不提的就是 KMP 算法，它是用来解决字符串查找的问题，可以在一个字符串（S）中查找一个子串（W）出现的位置。KMP 算法把字符匹配的时间复杂度缩小到 O(m+n) ,而空间复杂度也只有O(m)。因为“暴力搜索”的方法会反复回溯主串，导致效率低下，而KMP算法可以利用已经部分匹配这个有效信息，保持主串上的指针不回溯，通过修改子串的指针，让模式串尽量地移动到有效的位置。
+[Knuth-Morris-Pratt算法](http://en.wikipedia.org/wiki/Knuth–Morris–Pratt_algorithm) 用来解决字符串匹配的问题，可以在一个字符串S中查找一个子串W出现的位置。KMP 算法把字符匹配的时间复杂度缩小到 O(m+n) ，而空间复杂度也只有O(m)。直接的“暴力搜索”的方法会反复回溯主串，导致效率低下，而KMP算法可以利用已经部分匹配这个有效信息，保持主串上的指针不回溯，通过修改子串的指针，让模式串尽量地移动到有效的位置。
 
 具体算法细节请参考：
 
@@ -14,37 +14,19 @@
 - [KMP 算法详细解析](https://blog.sengxian.com/algorithms/kmp)
 - [图解 KMP 算法](http://blog.jobbole.com/76611/)
 - [汪都能听懂的KMP字符串匹配算法【双语字幕】](https://www.bilibili.com/video/av3246487/?from=search&seid=17173603269940723925)
-- [KMP字符串匹配算法1](https://www.bilibili.com/video/av11866460?from=search&seid=12730654434238709250)
-
-BM算法也是一种精确字符串匹配算法，它采用从右向左比较的方法，同时应用到了两种启发式规则，即坏字符规则 和好后缀规则 ，来决定向右跳跃的距离。基本思路就是从右往左进行字符匹配，遇到不匹配的字符后从坏字符表和好后缀表找一个最大的右移值，将模式串右移继续匹配。
+- [KMP字符串匹配算法](https://www.bilibili.com/video/av11866460?from=search&seid=12730654434238709250)
 
 
 
-### 2. 替换空格
+### 2. BM算法
 
-**题目**：请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。
+[Boyer-Moore算法](http://en.wikipedia.org/wiki/Boyer–Moore_string_search_algorithm)也是一种精确字符串匹配算法，它采用从右向左比较的方法，同时应用到了两种启发式规则，即坏字符规则 和好后缀规则 ，来决定向右跳跃的距离。基本思路就是从右往左进行字符匹配，遇到不匹配的字符后从坏字符表和好后缀表找一个最大的右移值，将模式串右移继续匹配。各种文本编辑器里面的查找(Ctrl + F)主要用的就是BM算法。
 
-**分析**：
+具体算法细节请参考：
 
-
-
-**代码**：
-
-```java
-public class Solution {
-    public String replaceSpace(StringBuffer str) {
-        StringBuffer res = new StringBuffer();
-        int len = str.length() - 1;
-        for(int i = len; i >= 0; i--){
-            if(str.charAt(i) == ' ')
-                res.append("02%");
-            else
-                res.append(str.charAt(i));
-        }
-        return res.reverse().toString();
-    }
-}
-```
+- [字符串匹配的BM算法](https://www.ruanyifeng.com/blog/2013/05/boyer-moore_string_search_algorithm.html)
+- [从KMP到BM算法](https://blog.csdn.net/v_july_v/article/details/6545192)
+- [BM算法理解](http://wiki.jikexueyuan.com/project/kmp-algorithm/bm.html)
 
 
 
