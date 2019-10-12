@@ -15,6 +15,50 @@
 - [图解 KMP 算法](http://blog.jobbole.com/76611/)
 - [汪都能听懂的KMP字符串匹配算法【双语字幕】](https://www.bilibili.com/video/av3246487/?from=search&seid=17173603269940723925)
 - [KMP字符串匹配算法](https://www.bilibili.com/video/av11866460?from=search&seid=12730654434238709250)
+- 强烈推荐，写得深入且易懂：[动态规划之 KMP 算法详解](https://mp.weixin.qq.com/s?__biz=MzU0MDg5OTYyOQ==&mid=2247484590&idx=1&sn=b363a51a39c76ed27acb17b550e71b56)
+
+```java
+public class KMP {
+    private int[][] dp;
+    private String pat;
+
+    public KMP(String pat) {
+        this.pat = pat;
+        int M = pat.length();
+        // dp[状态][字符] = 下个状态
+        dp = new int[M][256];
+        // base case
+        dp[0][pat.charAt(0)] = 1;
+        // 影子状态 X 初始为 0
+        int X = 0;
+        // 构建状态转移图（稍改的更紧凑了）
+        for (int j = 1; j < M; j++) {
+            for (int c = 0; c < 256; c++) {
+                dp[j][c] = dp[X][c];
+            dp[j][pat.charAt(j)] = j + 1;
+            // 更新影子状态
+            X = dp[X][pat.charAt(j)];
+        }
+    }
+
+    public int search(String txt) {
+        int M = pat.length();
+        int N = txt.length();
+        // pat 的初始态为 0
+        int j = 0;
+        for (int i = 0; i < N; i++) {
+            // 计算 pat 的下一个状态
+            j = dp[j][txt.charAt(i)];
+            // 到达终止态，返回结果
+            if (j == M) return i - M + 1;
+        }
+        // 没到达终止态，匹配失败
+        return -1;
+    }
+}
+```
+
+
 
 
 
